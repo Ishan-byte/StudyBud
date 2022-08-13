@@ -7,6 +7,8 @@ urlpatterns = [
     path('register/', views.register, name="register"),
     path('logout/', views.logOutUser, name="logout"),
     path('profile/<str:pk>/', views.userProfile, name="user-profile"),
+    path('edit-profile/<str:pk>/', views.editUserProfile, name="edit-profile"),
+
     # Home
     path('', views.home, name="home"),
 
@@ -19,4 +21,7 @@ urlpatterns = [
     # Messages
     path('delete-message/<str:pk>/', views.deleteMessage, name="delete-message"),
 
+    # Mobile
+    path('topics/', views.topicsPage, name="topics-page"),
+    path('activities/', views.activitiesPage, name="activities-page")
 ]
